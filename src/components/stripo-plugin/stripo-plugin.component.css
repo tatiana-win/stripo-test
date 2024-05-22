@@ -1,0 +1,60 @@
+.preview-full-height {
+  ::ng-deep .stripo-preview-frame {
+    height: 800px !important;
+  }
+}
+
+.preview-half-height {
+  ::ng-deep .stripo-preview-frame,
+  ::ng-deep .esdev-code-editor-block-panel {
+    height: 399px !important;
+  }
+
+  ::ng-deep .esdev-code-editor-block-panel {
+    position: absolute;
+    top: 420px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  ::ng-deep .esdev-preview-splitter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+::ng-deep .esdev-panel-content-wrapper {
+  min-height: 400px !important;
+}
+
+#stripoSettingsContainer {
+  width: 400px;
+  float: left;
+}
+
+#stripoPreviewContainer {
+  width: calc(100% - 400px);
+  float: left;
+  position: relative;
+}
+
+#externalSystemContainer {
+  background: #fff;
+  border-bottom: 1px solid;
+}
+
+.notification-zone {
+  position: fixed;
+  width: 400px;
+  z-index: 99999;
+  right: 20px;
+  bottom: 80px;
+}
+
+.image-url-input {
+  width: 400px;
+}

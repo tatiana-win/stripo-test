@@ -1,0 +1,16 @@
+.stub {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.template-content {
+  height: 925px;
+  flex: 1;
+}
+
+.template-editor {
+  margin: 20px;
+}

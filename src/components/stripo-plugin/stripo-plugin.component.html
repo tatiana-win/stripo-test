@@ -1,0 +1,24 @@
+<div
+  class="template-editor"
+  [class.preview-full-height]="true"
+  [class.preview-half-height]="isCodeEditorOpened"
+>
+  <div
+    id="externalSystemContainer"
+    class="d-flex justify-center p-1 w-full border-slate-300"
+  >
+    <button
+      id="codeEditor"
+      (click)="triggerCodeEditor()"
+      [class.active-button]="isCodeEditorOpened"
+    >
+      Code editor
+    </button>
+  </div>
+  <div>
+    <!--Plugin containers -->
+    <div id="stripoSettingsContainer">Loading...</div>
+
+    <div id="stripoPreviewContainer" class="stripo-preview"></div>
+  </div>
+</div>
