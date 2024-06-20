@@ -14,6 +14,7 @@ import {
   StripoConfig,
 } from '../../services';
 import './external_images_library.js';
+import './mergeTags.js';
 
 // @ts-ignore
 function request(method, url, data, callback) {
@@ -36,6 +37,7 @@ declare const window: {
   Stripo: Stripo;
   StripoApi: StripoApi;
   ExternalImagesLibrary: () => void;
+  ExternalMergeTags: () => void;
 } & Window;
 
 @Component({
@@ -76,7 +78,8 @@ export class StripoPluginComponent implements OnChanges, OnInit, OnDestroy {
       css: this.cssCode || DEFAULT_CSS,
       hideStripoImgUrl: true,
       codeEditorButtonId: 'codeEditor',
-      ignoreClickOutsideSelectors: '#handlebarsDialog',
+      externalMergeTags: window.ExternalMergeTags,
+      ignoreClickOutsideSelectors: '#externalImagesLibrary #externalMergeTags',
       externalImagesLibrary: window.ExternalImagesLibrary,
       onTemplateLoaded: () => (this.isLoaded = true),
       onElementSelected: (name) => {

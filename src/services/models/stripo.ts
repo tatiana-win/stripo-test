@@ -28,7 +28,8 @@ export interface StripoConfig {
   eventHandler?: (type: string, data: any) => void;
   localePatch?: Record<string, Record<string, string>>;
   customViewStyles?: string;
-  externalImagesLibrary: () => void;
+  externalImagesLibrary?: () => void;
+  externalMergeTags?: () => void;
 }
 
 export interface Stripo {
