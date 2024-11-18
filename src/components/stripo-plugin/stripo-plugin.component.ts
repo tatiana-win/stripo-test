@@ -152,7 +152,7 @@ export class StripoPluginComponent implements OnChanges, OnInit, OnDestroy {
     });
   }
 
-  getCompiledEmail(): Promise<{
+  printCompiledEmail(): Promise<{
     error: string;
     html: string;
     ampHtml: string;
@@ -160,6 +160,7 @@ export class StripoPluginComponent implements OnChanges, OnInit, OnDestroy {
   }> {
     return new Promise((resolve) => {
       window.StripoApi?.compileEmail((error, html, ampHtml, ampErrors) => {
+        console.log('html', html)
         resolve({ error, html, ampHtml, ampErrors });
       }, true);
     });
